@@ -1,5 +1,5 @@
 //EZZC.js  Since 2020.08.17 12:59
-var version = '1.5';
+var version = '1.6';
 var port = 8884;
 
 var body = '<html>'+
@@ -75,7 +75,9 @@ req.addListener("end",function(){
 //	console.log(params["text"]);
 	var project = params["project"];
 	var msg = params["text"];
-            msg = curtime+'\n'+msg
+	    cmsg = String(msg);
+	    msg = cmsg.substring(0,cmsg.length-2);
+            msg = curtime+'\n'+msg+'\n'
 	if(project == 'asa'){
 //		console.log("write to file");
 		//fs.writeFileSync(fname,msg);
