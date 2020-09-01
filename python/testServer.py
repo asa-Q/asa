@@ -1,3 +1,6 @@
-from web3 import Web3
-w3 = Web3(Web3.HTTPProvider("http://127.0.0.1:8454"))
+import json
+
+from web3 import Web3, HTTPProvider
+w3url = "http://localhost:8545"
+w3 = Web3(HTTPProvider(w3url))
 print(w3.isConnected())
