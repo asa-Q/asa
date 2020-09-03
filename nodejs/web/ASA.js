@@ -1,5 +1,5 @@
 //EZZC.js  Since 2020.08.17 12:59
-var version = '1.6';
+var version = '1.8';
 var port = 8884;
 
 var body = '<html>'+
@@ -23,6 +23,7 @@ var body = '<html>'+
 
 
 
+var mqSend = require('./lib/RabbitMQSend.js');
 
 var http = require('http');
 var url = require('url');
@@ -81,6 +82,11 @@ req.addListener("end",function(){
 	if(project == 'asa'){
 //		console.log("write to file");
 		//fs.writeFileSync(fname,msg);
+		//
+mqSend('testQueue',msg, (error) => {
+    console.log(error)
+});
+
 		fs.appendFile(fname,msg,function(err){
 
 			if(err) throw err;
