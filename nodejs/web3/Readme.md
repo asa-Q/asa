@@ -1,1 +1,1 @@
-test web3 contracts
+Utilize truffle contracts
