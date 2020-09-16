@@ -11,7 +11,7 @@ module.exports = {
 //      port: 7545,
       port: 8545,
       network_id: "*",
-      from: "0x0c4079C10953225DD8d215CE17c7efbD2fC16acD"
+      from: "0x1e1c0D8A25716C59d40845fB38014f2066508D74"
     },
     test: {
       host: "127.0.0.1",
@@ -19,6 +19,22 @@ module.exports = {
       port: 8545,
       network_id: "*"
     }
-  }
+  },
+
+	 // Configure your compilers
+  compilers: {
+    solc: {
+       version: "0.6.2",    // Fetch exact version from solc-bin (default: truffle's version)
+      // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
+      // settings: {          // See the solidity docs for advice about optimization and evmVersion
+      //  optimizer: {
+      //    enabled: false,
+      //    runs: 200
+      //  },
+      //  evmVersion: "byzantium"
+      // }
+    },
+  },
+
   //
 };
