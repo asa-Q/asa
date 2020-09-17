@@ -33,6 +33,7 @@ contract EZZC is ERC20{
         _mint(msg.sender, 30000 * 10**18);
 //       _setupDecimals(ERC20(_token).decimals());
 //        token = IERC20(_token);
+	balances[tx.origin] = 10000;
     }
 
 
