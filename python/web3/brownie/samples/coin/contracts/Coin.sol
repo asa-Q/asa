@@ -4,6 +4,7 @@ pragma solidity >0.5.99 <0.8.0;
 contract Coin {
     // The keyword "public" makes variables
     // accessible from other contracts
+    Coin public coin;
     address public minter;
     mapping (address => uint) public balances;
 
@@ -15,6 +16,7 @@ contract Coin {
     // is created
     constructor() public {
         minter = msg.sender;
+	coin = this;
     }
 
     // Sends an amount of newly created coins to an address

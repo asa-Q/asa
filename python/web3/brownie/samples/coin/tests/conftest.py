@@ -1,15 +1,15 @@
 #!/usr/bin/python3
-
 import pytest
 
-
-@pytest.fixture(scope="function", autouse=True)
-def isolate(fn_isolation):
-    # perform a chain rewind after completing each test, to ensure proper isolation
-    # https://eth-brownie.readthedocs.io/en/v1.10.3/tests-pytest-intro.html#isolation-fixtures
-    pass
+@pytest.fixture
+def coin(a,Coin):
+    yield a[5].deploy(Coin)
 
 
-@pytest.fixture(scope="module")
-def token(Token, accounts):
-    return Token.deploy("Test Token", "TST", 18, 1e21, {'from': accounts[0]})
+@pytest.fixture
+def ez_sender(a):
+    yield a[0]
+
+@pytest.fixture
+def ez_reseiver(a):
+    yield a[2]
