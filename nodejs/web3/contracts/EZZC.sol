@@ -37,9 +37,6 @@ contract EZZC is ERC20{
     }
 
 
-//	constructor() public {
-//		balances[tx.origin] = 10000;
-//	}
 
 	function sendCoin(address receiver, uint amount) public returns(bool sufficient) {
 		if (balances[msg.sender] < amount) return false;
