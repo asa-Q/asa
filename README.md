@@ -13,6 +13,10 @@ ln -s /usr/local/lib/node_modules/ganache-cli/cli.js ~/scripts/ganache
 2020.09.16
 add reference messages
 
+2020.09.18
+review chain information by brownie
+https://eth-brownie.readthedocs.io/en/stable/core-chain.html
+
 
 References:
 
