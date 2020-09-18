@@ -4,7 +4,8 @@ pragma solidity >0.5.99 <0.8.0;
 contract Coin {
     // The keyword "public" makes variables
     // accessible from other contracts
-    Coin public coin;
+    //    Coin public coin;
+    uint value;
     address public minter;
     mapping (address => uint) public balances;
 
@@ -16,7 +17,7 @@ contract Coin {
     // is created
     constructor() public {
         minter = msg.sender;
-	coin = this;
+	//coin = this;
     }
 
     // Sends an amount of newly created coins to an address
@@ -30,9 +31,15 @@ contract Coin {
     // Sends an amount of existing coins
     // from any caller to an address
     function send(address receiver, uint amount) public {
-        require(amount <= balances[msg.sender], "Insufficient balance.");
-        balances[msg.sender] -= amount;
+    //    require(amount <= balances[msg.sender], "Insufficient balance.");
+    //    balances[msg.sender] -= amount;
         balances[receiver] += amount;
         emit Sent(msg.sender, receiver, amount);
     }
+
+    function setValue(uint _value) external {value = _value;}
+    function getValue() external view returns(uint){return value;}
+
+
+
 }
