@@ -12,9 +12,9 @@ def gov(a):
 
 
 @pytest.fixture
-def token(a, VaultEZZC):
+def token(a, Token):
     # MUst be ERC20
-    yield a[0].deploy(VaultEZZC)
+    yield a[0].deploy(Token)
 
 
 @pytest.fixture

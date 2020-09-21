@@ -34,7 +34,7 @@ contract VaultEZZC is ERC20{
         controller = _controller;
     }
 
-    function balance() public view returns (uint) {
+    function balanceOf() public view returns (uint) {
         return token.balanceOf(address(this))
                 .add(Controller(controller).balanceOf(address(token)));
     }
@@ -71,7 +71,7 @@ contract VaultEZZC is ERC20{
     }
 
     function deposit(uint _amount) public {
-        uint _pool = balance();
+        uint _pool = balanceOf();
         uint _before = token.balanceOf(address(this));
         token.safeTransferFrom(msg.sender, address(this), _amount);
         uint _after = token.balanceOf(address(this));
@@ -99,7 +99,7 @@ contract VaultEZZC is ERC20{
 
     // No rebalance implementation for lower fees and faster swaps
     function withdraw(uint _shares) public {
-        uint r = (balance().mul(_shares)).div(totalSupply());
+        uint r = (balanceOf().mul(_shares)).div(totalSupply());
         _burn(msg.sender, _shares);
 
         // Check balance
@@ -119,9 +119,8 @@ contract VaultEZZC is ERC20{
 
 
 
-
     function getPricePerFullShare() public view returns (uint) {
-        return balance().mul(1e18).div(totalSupply());
+        return balanceOf().mul(1e18).div(totalSupply());
     }
 
 
