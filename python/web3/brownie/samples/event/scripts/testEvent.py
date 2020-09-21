@@ -1,8 +1,11 @@
 from web3.auto import w3
 import asyncio
 
+
+
 def handle_event(event):
-    print(event)
+    print('Transaction sent:')
+    print(event.hex().encode('utf-8'))
     # and whatever
 
 async def log_loop(event_filter, poll_interval):
