@@ -1,5 +1,8 @@
 #Since 2020.08.31
+
+
 2020.09.29
+git remote set-url origin https://asa-Q:passwd@github.com/asa-Q/asa.git
 
 2020.09.03
 nodejs/web/ASA.js
