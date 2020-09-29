@@ -1,6 +1,5 @@
 #Since 2020.08.31
 2020.09.29
-git config --global credential.helper store
 
 2020.09.03
 nodejs/web/ASA.js
