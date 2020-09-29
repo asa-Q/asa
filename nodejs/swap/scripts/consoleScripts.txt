@@ -1,0 +1,23 @@
+//Scripts run in truffle console
+//copy to truffle command line
+//before run those sciprts, run ezMigrations at first.
+//then run ezConsole
+//copy to truffle command line
+alice = accounts[0];
+bob = accounts[1];
+carol = accounts[2];
+sushi = SushiToken.deployed().then(instance=>sushi=instance);
+sushi.name();
+sushi.totalSupply();
+
+sushi.balanceOf(alice)
+sushi.mint(alice,'1000')
+sushi.balanceOf(alice)
+sushi.balaceOf(bob)
+sushi.transfer(bob,'100',{from:alice})
+sushi.balanceOf(bob)
+sushi.totalSupply();
+
+
+
+

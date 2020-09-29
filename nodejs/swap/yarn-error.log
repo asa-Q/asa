@@ -1,0 +1,41 @@
+Arguments: 
+  /usr/bin/node /usr/local/lib/node_modules/yarn/bin/yarn.js
+
+PATH: 
+  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/ezroot/users/ezzc/scripts:/ezroot/users/ezzc/scripts/public:./scripts::/ezroot/users/ezzc/.local/bin:/ezroot/users/ezzc/scripts:/ezroot/users/ezzc/scripts/public:./scripts::/ezroot/users/ezzc/.local/bin:~/scripts:~/scripts/public:
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  10.19.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: connect ECONNREFUSED 0.0.0.0:443
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+npm manifest: 
+  {
+    "name": "SushiSwap",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "dependencies": {
+      "@openzeppelin/contracts": "^3.1.0",
+      "@openzeppelin/test-helpers": "^0.5.6",
+      "truffle": "^5.1.41",
+      "truffle-flattener": "^1.4.4"
+    },
+    "devDependencies": {
+      "truffle-plugin-hello": "^1.0.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
