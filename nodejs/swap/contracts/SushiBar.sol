@@ -1,8 +1,8 @@
 pragma solidity 0.6.12;
 
-import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts/math/SafeMath.sol";
+import "./lib/token/ERC20/IERC20.sol";
+import "./lib/token/ERC20/ERC20.sol";
+import "./lib/math/SafeMath.sol";
 
 
 contract SushiBar is ERC20("SushiBar", "xSUSHI"){

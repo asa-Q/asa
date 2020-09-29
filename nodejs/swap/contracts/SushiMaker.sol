@@ -1,23 +1,23 @@
 pragma solidity 0.6.12;
 
-import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import "@openzeppelin/contracts/token/ERC20/SafeERC20.sol";
-import "@openzeppelin/contracts/math/SafeMath.sol";
-import "./uniswapv2/interfaces/IUniswapV2ERC20.sol";
-import "./uniswapv2/interfaces/IUniswapV2Pair.sol";
-import "./uniswapv2/interfaces/IUniswapV2Factory.sol";
+import "./lib/token/ERC20/IERC20.sol";
+import "./lib/token/ERC20/SafeERC20.sol";
+import "./lib/math/SafeMath.sol";
+import "./lib/ezzc/interfaces/IEZZCERC20.sol";
+import "./lib/ezzc/interfaces/IEZZCPair.sol";
+import "./lib/ezzc/interfaces/IEZZCFactory.sol";
 
 
 contract SushiMaker {
     using SafeMath for uint256;
     using SafeERC20 for IERC20;
 
-    IUniswapV2Factory public factory;
+    IEZZCFactory public factory;
     address public bar;
     address public sushi;
     address public weth;
 
-    constructor(IUniswapV2Factory _factory, address _bar, address _sushi, address _weth) public {
+    constructor(IEZZCFactory _factory, address _bar, address _sushi, address _weth) public {
         factory = _factory;
         sushi = _sushi;
         bar = _bar;
@@ -27,7 +27,7 @@ contract SushiMaker {
     function convert(address token0, address token1) public {
         // At least we try to make front-running harder to do.
         require(msg.sender == tx.origin, "do not convert from contract");
-        IUniswapV2Pair pair = IUniswapV2Pair(factory.getPair(token0, token1));
+        IEZZCPair pair = IEZZCPair(factory.getPair(token0, token1));
         pair.transfer(address(pair), pair.balanceOf(address(this)));
         pair.burn(address(this));
         uint256 wethAmount = _toWETH(token0) + _toWETH(token1);
@@ -45,7 +45,7 @@ contract SushiMaker {
             _safeTransfer(token, factory.getPair(weth, sushi), amount);
             return amount;
         }
-        IUniswapV2Pair pair = IUniswapV2Pair(factory.getPair(token, weth));
+        IEZZCPair pair = IEZZCPair(factory.getPair(token, weth));
         if (address(pair) == address(0)) {
             return 0;
         }
@@ -64,7 +64,7 @@ contract SushiMaker {
     }
 
     function _toSUSHI(uint256 amountIn) internal {
-        IUniswapV2Pair pair = IUniswapV2Pair(factory.getPair(weth, sushi));
+        IEZZCPair pair = IEZZCPair(factory.getPair(weth, sushi));
         (uint reserve0, uint reserve1,) = pair.getReserves();
         address token0 = pair.token0();
         (uint reserveIn, uint reserveOut) = token0 == weth ? (reserve0, reserve1) : (reserve1, reserve0);

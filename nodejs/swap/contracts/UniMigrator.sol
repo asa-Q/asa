@@ -1,5 +1,5 @@
 pragma solidity 0.6.12;
-import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import "./lib/token/ERC20/IERC20.sol";
 
 contract FakeERC20 {
     uint256 public amount;

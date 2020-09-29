@@ -1,8 +1,8 @@
 pragma solidity 0.6.12;
 
 
-import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
+import "./lib/token/ERC20/ERC20.sol";
+import "./lib/access/Ownable.sol";
 
 
 // SushiToken with Governance. v1.0
