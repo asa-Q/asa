@@ -27,4 +27,6 @@ References:
 
 https://ethereum.org/en/whitepaper/
 https://0x.org/pdfs/0x_white_paper.pdf
+https://defirate.com/
+https://blog.openzeppelin.com/the-state-of-smart-contract-upgrades/
 
