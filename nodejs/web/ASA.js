@@ -50,7 +50,7 @@ return fmt;
 
 http.createServer(function(req, res) {
 	var curtime = new Date().Format("yyyyMMddhhmmss");
-	var fileName = "/zyroot/users/ezzc/UploadServer/static/"+"ziyiLOG.txt";
+	var fileName = "./logs/"+"ASA.txt";
 	var writeString = "\n" + curtime; 
 	send(res,body);
 	memory(req,res,fileName,writeString);
