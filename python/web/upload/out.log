@@ -1,10 +1,104 @@
+WARNING:tornado.access:404 GET /favicon.ico (58.37.133.227) 0.55ms
+WARNING:tornado.access:404 GET /nmaplowercheck1603541616 (101.133.226.32) 0.48ms
+WARNING:tornado.access:404 GET /HNAP1 (101.133.226.32) 0.46ms
+WARNING:tornado.access:404 GET /evox/about (101.133.226.32) 0.47ms
+WARNING:tornado.access:404 POST /sdk (101.133.226.32) 0.54ms
+WARNING:tornado.access:404 POST /sdk (101.133.225.252) 0.61ms
+WARNING:tornado.access:404 GET /nmaplowercheck1603664398 (101.133.225.252) 0.47ms
+WARNING:tornado.access:404 GET /HNAP1 (101.133.225.252) 0.49ms
+WARNING:tornado.access:404 GET /nmaplowercheck1603664397 (101.133.225.252) 0.42ms
+WARNING:tornado.access:404 GET /evox/about (101.133.225.252) 0.42ms
+WARNING:tornado.access:404 GET /favicon.ico (106.75.184.38) 0.62ms
+WARNING:tornado.access:404 GET /favicon.ico (58.37.133.227) 0.47ms
+WARNING:tornado.access:404 GET /nmaplowercheck1603970249 (106.14.81.82) 0.48ms
+WARNING:tornado.access:404 GET /HNAP1 (106.14.81.82) 0.63ms
+WARNING:tornado.access:404 GET /evox/about (106.14.81.82) 0.65ms
+WARNING:tornado.access:404 POST /sdk (106.14.81.82) 0.51ms
+WARNING:tornado.access:404 GET /explicit_not_exist_path (47.103.97.252) 0.44ms
+WARNING:tornado.access:404 GET /index.html (47.103.97.252) 0.43ms
+WARNING:tornado.access:404 GET /index.php (47.103.97.252) 0.42ms
+WARNING:tornado.access:404 GET /index.jsp (47.103.97.252) 0.44ms
+WARNING:tornado.access:404 GET /admin/ (47.103.97.252) 0.38ms
+WARNING:tornado.access:404 GET /favicon.ico (47.103.97.252) 0.58ms
+WARNING:tornado.access:404 GET /robots.txt (47.103.97.252) 0.47ms
+WARNING:tornado.access:404 GET /r/cms/www/red/img/prompt.jpg (47.103.97.252) 0.42ms
+WARNING:tornado.access:404 GET /r/cms/www/red/style/swiper.min.js (47.103.97.252) 0.41ms
+WARNING:tornado.access:404 GET /wcm/ (47.103.97.252) 0.42ms
+WARNING:tornado.access:404 GET /phpMyAdmin/ (47.103.97.252) 0.40ms
+WARNING:tornado.access:404 GET /phpmyadmin/ (47.103.97.252) 0.42ms
 ERROR:tornado.application:Uncaught exception POST /file (58.37.133.227)
 HTTPServerRequest(protocol='http', host='39.107.238.138:8886', method='POST', uri='/file', version='HTTP/1.1', remote_ip='58.37.133.227')
 Traceback (most recent call last):
   File "/usr/local/python384a/lib/python3.8/site-packages/tornado/web.py", line 1701, in _execute
     result = method(*self.path_args, **self.path_kwargs)
-  File "server.py", line 42, in post
-    with open(filepath,'wb') as up:
-PermissionError: [Errno 13] Permission denied: '/zyroot/statics/asa/1.jpg'
-ERROR:tornado.access:500 POST /file (58.37.133.227) 163.15ms
-WARNING:tornado.access:404 GET /favicon.ico (58.37.133.227) 0.52ms
+  File "server.py", line 37, in post
+    file_metas=self.request.files['file']
+KeyError: 'file'
+ERROR:tornado.access:500 POST /file (58.37.133.227) 19.72ms
+WARNING:tornado.access:404 GET /favicon.ico (58.37.133.227) 0.50ms
+ERROR:tornado.application:Uncaught exception POST /file (58.37.133.227)
+HTTPServerRequest(protocol='http', host='39.107.238.138:8886', method='POST', uri='/file', version='HTTP/1.1', remote_ip='58.37.133.227')
+Traceback (most recent call last):
+  File "/usr/local/python384a/lib/python3.8/site-packages/tornado/web.py", line 1701, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "server.py", line 37, in post
+    file_metas=self.request.files['file']
+KeyError: 'file'
+ERROR:tornado.access:500 POST /file (58.37.133.227) 0.89ms
+WARNING:tornado.access:404 GET /favicon.ico (58.37.133.227) 0.57ms
+WARNING:tornado.access:404 GET /favicon.ico (58.37.133.227) 0.51ms
+WARNING:tornado.access:404 GET /source/pack/upload/install/ios.php (203.34.152.155) 0.37ms
+WARNING:tornado.access:404 GET /js/room.js (203.34.152.155) 0.93ms
+WARNING:tornado.access:404 GET /index/index/register1/type/1.html (203.34.152.155) 0.82ms
+WARNING:tornado.access:404 GET /Public/js/chatmsg.js (203.34.152.155) 0.23ms
+WARNING:tornado.access:404 GET /Resource/webResource/js/newcheck.js (203.34.152.155) 0.30ms
+WARNING:tornado.access:404 GET /static/js/base.js (203.34.152.155) 0.44ms
+WARNING:tornado.access:404 GET /views/ucenter/ucenter.js (203.34.152.155) 0.66ms
+WARNING:tornado.access:404 GET /User/Reg/ (203.34.152.155) 0.57ms
+WARNING:tornado.access:404 GET /static/js/lang_json_cn.js (203.34.152.155) 0.41ms
+WARNING:tornado.access:404 GET /app/common.js?version=2.4.43&build=1563436823 (203.34.152.155) 0.44ms
+WARNING:tornado.access:404 GET /Pay/index.php (203.34.152.155) 0.47ms
+WARNING:tornado.access:404 GET /Public/Home/statics/web/js/style.js (203.34.152.155) 0.59ms
+WARNING:tornado.access:404 GET /wx/ZFpass.asp (203.34.152.155) 0.49ms
+WARNING:tornado.access:404 GET /11.txt (203.34.152.155) 0.24ms
+WARNING:tornado.access:404 GET /static/home/static/js/iindex.js (203.34.152.155) 0.34ms
+WARNING:tornado.access:404 GET /trade/quote/list (203.34.152.155) 0.28ms
+WARNING:tornado.access:404 GET /static/pcweb/js/newcheck.js (203.34.152.155) 0.46ms
+WARNING:tornado.access:404 GET /cloud-app/include/css/uncall.css (203.34.152.155) 0.56ms
+WARNING:tornado.access:404 GET /web/api/getConfig?type=several&keys=www_app_base:downloadUrl1,www_app_base:downloadUrl4&accessToken=undefined (203.34.152.155) 0.56ms
+WARNING:tornado.access:404 GET /mmbh/login.php (203.34.152.155) 0.28ms
+WARNING:tornado.access:404 GET /gai/ucms/login.php (203.34.152.155) 0.29ms
+WARNING:tornado.access:404 GET /static/index.css (203.34.152.155) 0.46ms
+WARNING:tornado.access:404 GET /images2/bankCheck.js (203.34.152.155) 0.40ms
+WARNING:tornado.access:404 GET /lateron.asp (203.34.152.155) 0.36ms
+WARNING:tornado.access:404 GET /pczs/js/trendChart.js (203.34.152.155) 0.42ms
+WARNING:tornado.access:404 GET /index.php?g=Pay&m=Res&a=ispay (203.34.152.155) 0.40ms
+WARNING:tornado.access:404 GET /js/sms.js (203.34.152.155) 0.41ms
+WARNING:tornado.access:404 GET /Application/Basic/Static/css/customerselect.css (203.34.152.155) 0.38ms
+WARNING:tornado.access:404 GET /static/admin/js/cvphp.js (203.34.152.155) 0.61ms
+WARNING:tornado.access:404 GET /Public/Manage/js/cvphp.js (203.34.152.155) 0.61ms
+WARNING:tornado.access:404 GET /Template/Home/Run/record.html (203.34.152.155) 0.28ms
+WARNING:tornado.access:404 GET /case/ (203.34.152.155) 0.37ms
+WARNING:tornado.access:404 GET /index2.php (203.34.152.155) 0.40ms
+WARNING:tornado.access:404 GET /Public/app/js/cvphp.js (203.34.152.155) 0.38ms
+WARNING:tornado.access:404 GET /api/v1/member/home (203.34.152.155) 0.36ms
+WARNING:tornado.access:404 GET /resources/main/common.js (203.34.152.155) 0.37ms
+WARNING:tornado.access:404 GET /phpcms/modules/member/touzi.php (203.34.152.155) 0.37ms
+WARNING:tornado.access:404 GET /Public/Wchat/js/cvphp.js (203.34.152.155) 0.37ms
+WARNING:tornado.access:404 GET /index3.php?m=Order&a=hetong&id=999999 (203.34.152.155) 0.37ms
+WARNING:tornado.access:404 GET /static/js/winScale.js (203.34.152.155) 0.46ms
+WARNING:tornado.access:404 GET /views/bank/bank.html (203.34.152.155) 0.28ms
+WARNING:tornado.access:404 GET /static/new/js/shangchuan.js (203.34.152.155) 0.32ms
+WARNING:tornado.access:404 GET /js/guest.js (203.34.152.155) 0.24ms
+WARNING:tornado.access:404 GET /public/static/js/main.js (203.34.152.155) 0.25ms
+WARNING:tornado.access:404 GET /Six/Js/class_12.js (203.34.152.155) 0.23ms
+WARNING:tornado.access:404 GET /Public/mobile/js/config.js (203.34.152.155) 0.26ms
+WARNING:tornado.access:404 GET /Loan/SubmitLogin (203.34.152.155) 0.25ms
+WARNING:tornado.access:404 GET /Public/home/appjs/Index.js (203.34.152.155) 0.30ms
+WARNING:tornado.access:404 GET /static/index/js/lk/order.js (203.34.152.155) 0.36ms
+WARNING:tornado.access:404 GET /jsonpublic/selectAddtion.asp (203.34.152.155) 0.32ms
+WARNING:tornado.access:404 GET /index/index/ajaxreg.shtml (203.34.152.155) 0.38ms
+WARNING:tornado.access:404 GET /mindex/statics/js/qiandao.js (203.34.152.155) 0.27ms
+WARNING:tornado.access:404 GET /statics/js/hui.js (203.34.152.155) 0.27ms
+WARNING:tornado.access:404 GET /favicon.ico (211.161.247.1) 0.58ms
+WARNING:tornado.access:404 GET /favicon.ico (211.161.247.1) 0.53ms

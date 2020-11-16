@@ -42,7 +42,7 @@ class UploadFileHandler(tornado.web.RequestHandler):
             with open(filepath,'wb') as up:      
                 up.write(meta['body'])
             #self.write('finished!')
-            self.write('http://www.ziyichain.com/statics/asa'+filename)
+            self.write('http://www.ziyichain.com/statics/asa/'+filename)
             #send_msg('http://www.ziyichain.com/statics/'+filename)
 
 

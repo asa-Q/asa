@@ -15,7 +15,7 @@ var body = '<html>'+
     '<input type="hidden" name="project" value="asa"/><br>'+
     '<input type="submit" value="OK" />'+
     '</form></center>'+
-    '<form action="http://39.107.238.138:8888/file" enctype="multipart/form-data" method="post">'+
+    '<form action="http://39.107.238.138:8886/file" enctype="multipart/form-data" method="post">'+
     '<input type="file" name="file"/><br/>'+
     '<input type="submit" value="submit"/></form>'+
     '</body>'+
