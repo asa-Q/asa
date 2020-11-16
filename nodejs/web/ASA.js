@@ -1,24 +1,27 @@
 //EZZC.js  Since 2020.08.17 12:59
-var version = '1.9';
+var version = '2.0';
 var port = 8884;
 
 var body = '<html>'+
     '<head>'+
     '<meta http-equiv="Content-Type" content="text/html; '+
     'charset=UTF-8" />'+
+    ' <script src="http://39.107.238.138/statics/asa/js/message.js"></script>'+
     '</head>'+
     '<body>'+
     '<center>'+
-    '<h6>'+version+'</h6>'+
+    '<h6>Callback Function:::'+version+'</h6>'+
+    '<textarea id="msg" name="msg" rows="8" cols="80"></textarea>'+
     '<form action="/" method="post">'+
-    '<textarea name="text" rows="40" cols="240"></textarea>'+
+    '<textarea name="text" rows="8" cols="80"></textarea>'+
     '<input type="hidden" name="project" value="asa"/><br>'+
-    '<input type="submit" value="OK" />'+
+    '<input type="submit" value="OK" style="font-size:20px"/>'+
     '</form></center>'+
     '<form action="http://39.107.238.138:8886/file" enctype="multipart/form-data" method="post">'+
     '<input type="file" name="file"/><br/>'+
     '<input type="submit" value="submit"/></form>'+
     '</body>'+
+    '<script>ezzc();</script>'+
     '</html>';
 
 
@@ -79,7 +82,8 @@ req.addListener("end",function(){
 	    cmsg = String(msg);
 //	    msg = cmsg.substring(0,cmsg.length-2);
 	    msg = cmsg;
-            msg = curtime+'\n'+msg+'\n'
+//            msg = curtime+'\n'+msg+'\n'
+            msg = msg+'\n'
 	if(project == 'asa'){
 //		console.log("write to file");
 		//fs.writeFileSync(fname,msg);
