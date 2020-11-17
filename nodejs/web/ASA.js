@@ -6,9 +6,13 @@ var body = '<html>'+
     '<head>'+
     '<meta http-equiv="Content-Type" content="text/html; '+
     'charset=UTF-8" />'+
+    '<link href="http://39.107.238.138/statics/asa/css/ez.css" rel="stylesheet" type="text/css"/>'+
     ' <script src="http://39.107.238.138/statics/asa/js/message.js"></script>'+
+//    ' <script src="http://39.107.238.138/statics/js/vue.js"></script>'+
+//    ' <script src="http://39.107.238.138/statics/js/axios.js"></script>'+
     '</head>'+
-    '<body>'+
+    '<body onload="ezzc()">'+
+    '<div class="ezTime" id="ezTime"></div>'+
     '<center>'+
     '<h6>Callback Function:::'+version+'</h6>'+
     '<textarea id="msg" name="msg" rows="8" cols="80"></textarea>'+
@@ -21,7 +25,7 @@ var body = '<html>'+
     '<input type="file" name="file"/><br/>'+
     '<input type="submit" value="submit"/></form>'+
     '</body>'+
-    '<script>ezzc();</script>'+
+    '<script>setInterval("ezzc()",1000);</script>'+
     '</html>';
 
 
