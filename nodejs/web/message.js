@@ -1,5 +1,5 @@
 function ezzc(){
-window.document.getElementById("msg").value = "Hello ASA!"; 	
+window.document.getElementById("msg").value = ""; 	
 	var time = new Date(); 
      
    var hours = (time.getHours()).toString(); 

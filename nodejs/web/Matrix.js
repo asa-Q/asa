@@ -7,16 +7,19 @@ var r_msg = ""
 
 var server = ws.createServer(function (conn) {
 	console.log("New connection")
-	conn.on("text", function (str) {
 	let mq = require("./lib/RabbitMQPromiseSend.js");
-	mq('testQueue',conn,str,(msg) =>
+	mq('testQueue',server,(msg) =>
 	{
 })
-//		console.log("Received "+str)
-	//	conn.sendText('{"data":"'+str+'",'+'"msg":"'+r_msg+'"}')
+
+	conn.on("text", function (str) {
+	console.log("Received "+str)
 	})
 	conn.on("close", function (code, reason) {
 		console.log("Connection closed")
+	})
+	conn.on("connect", function (code, reason) {
+console.log("Connected");	
 	})
 	
 	conn.on("error",function(err){

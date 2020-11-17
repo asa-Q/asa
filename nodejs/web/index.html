@@ -5,7 +5,7 @@
 </head>
 <body>
 	<center> 
-	<h1>Callback Function</h1>
+	<h1>Callback Function v1.0</h1>
     <input id="sendTxt" type="text"/>
     <button id="sendBtn">Send Command</button>
     
@@ -30,6 +30,8 @@
 				var txt = document.getElementById('sendTxt').value;
 				if(txt){
 					websocket.send(txt);
+					//alert(txt);
+					document.getElementById("sendTxt").value = ''; 
 				}
 			}
         }

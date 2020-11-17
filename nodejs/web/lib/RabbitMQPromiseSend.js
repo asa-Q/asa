@@ -1,5 +1,5 @@
  
-function   RabbitMQPromiseSend(queueName,conn,str, errCallBack) {
+function   RabbitMQPromiseSend(queueName,server,errCallBack) {
         let self = this;
 	self.queueName = queueName;
 	self.amqp = require('amqplib');
@@ -21,7 +21,11 @@ function   RabbitMQPromiseSend(queueName,conn,str, errCallBack) {
         //console.log(msg.content.toString());
         var r_msg = msg.content.toString();
 	      r_msg = r_msg.replace(/[\r\n]/g,"");
-  conn.sendText('{"data":"'+str+'",'+'"msg":"'+r_msg+'"}')      
+		      console.log('sending');
+		server.connections.forEach(function(conn){
+			conn.sendText('{"msg":"'+r_msg+'"}')
+		})
+
         ch.ack(msg);
       }
     });
