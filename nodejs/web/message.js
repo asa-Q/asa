@@ -17,3 +17,8 @@ window.document.getElementById("msg").value = "Hello ASA!";
    var timeReturn = hours + ":" + minutes + ":" + seconds; 
    document.getElementById("ezTime").innerHTML = timeReturn; 
 } 
+
+
+
+
+

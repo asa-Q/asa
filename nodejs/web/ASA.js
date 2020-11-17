@@ -15,7 +15,7 @@ var body = '<html>'+
     '<div class="ezTime" id="ezTime"></div>'+
     '<center>'+
     '<h6>Callback Function:::'+version+'</h6>'+
-    '<textarea id="msg" name="msg" rows="8" cols="80"></textarea>'+
+//    '<textarea id="msg" name="msg" rows="8" cols="80"></textarea>'+
     '<form action="/" method="post">'+
     '<textarea name="text" rows="8" cols="80"></textarea>'+
     '<input type="hidden" name="project" value="asa"/><br>'+
