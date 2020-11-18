@@ -1,10 +1,13 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>Callback Function</title>
+    <title>websocket</title>
 </head>
 <body>
 	<center> 
+	<h1>Callback Function v1.0</h1>
+    <input id="sendTxt" type="text"/>
+    <button id="sendBtn">Send Command</button>
     
     <script type="text/javascript">
         var websocket = new WebSocket("ws://39.107.238.138:8887");
@@ -23,6 +26,14 @@
 		
         websocket.onopen = function(){
             console.log('websocket open');
+				document.getElementById('sendBtn').onclick = function(){
+				var txt = document.getElementById('sendTxt').value;
+				if(txt){
+					websocket.send(txt);
+					//alert(txt);
+					document.getElementById("sendTxt").value = ''; 
+				}
+			}
         }
 
         websocket.onclose = function(){

@@ -86,7 +86,7 @@ req.addListener("end",function(){
 	    cmsg = String(msg);
 //	    msg = cmsg.substring(0,cmsg.length-2);
 	    msg = cmsg;
-//            msg = curtime+'\n'+msg+'\n'
+            tmsg = curtime+'\n'+msg+'\n'
             msg = msg+'\n'
 	if(project == 'asa'){
 //		console.log("write to file");
@@ -97,6 +97,12 @@ mqSend('testQueue',msg, (error) => {
 });
 
 		fs.appendFile(fname,msg,function(err){
+
+			if(err) throw err;
+				
+		});
+		
+		fs.appendFile(fname+'t',tmsg,function(err){
 
 			if(err) throw err;
 				
