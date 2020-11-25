@@ -9,17 +9,9 @@
 <script>
     var xStep = 0.01;
     var yStep = 0.01;
-    var cameraX = 10;
-    var cameraY = 10;
-    var cameraZ = 10;
         function mouseDownFuc(e) {
 xStep = 0;
 yStep = 0;
-	};
-        function mouseMoveFuc(e) {
-//alert(e.clientX);	
-//camearaX = e.clientX;	
-//camearaY = e.clientY;	
 	};
         function mouseClickFuc(e) {
 		//alert("click");
@@ -28,7 +20,6 @@ yStep = 0.01;
 	};
     document.addEventListener('mousedown', mouseDownFuc);
     document.addEventListener('click', mouseClickFuc);
-    document.addEventListener('mousemove', mouseMoveFuc);
     var scene = new THREE.Scene();
     var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
@@ -44,17 +35,9 @@ yStep = 0.01;
 
     var cube = new THREE.Mesh( geometry, material );
 
-  scene.add( cube );
-
-
-
-
-
-
-
+    scene.add( cube );
 
     camera.position.z = 5;
-//    camera.position.set(cameraX,cameraY,cameraZ);
     var render = function () {
         requestAnimationFrame( render );
 

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ASA</title>
+</head>
+<body>
+	<canvas id="mainCanvas" width="800px" height="600px"></canvas>
+<script src="js/three/three.js"></script>
+<script>
+    var scene = new THREE.Scene();
+
+    var renderer = new THREE.WebGLRenderer(
+	    {
+		    canvas: document.getElementById('mainCanvas')
+	    }
+    );
+
+    renderer.setClearColor(0x000000);
+
+       var aspect = window.innerWidth / window.innerHeight;
+        var camera = new THREE.OrthographicCamera(-2 * aspect, 2 * aspect, 1.5 * aspect, -1.5 * aspect, 1, 500);
+        camera.position.set(100, 100, 100);
+        scene.add(camera);
+        camera.lookAt(new THREE.Vector3(0, 0, 0));
+        var cube = new THREE.Mesh(new THREE.CubeGeometry(1, 2, 3, 1, 2, 3),
+            new THREE.MeshBasicMaterial({
+                color: 0xff0000,
+                wireframe: true
+            })
+        )
+        scene.add(cube);
+ 
+        renderer.render(scene, camera);
+
+</script>
+</body>
+</html>
