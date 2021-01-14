@@ -9,4 +9,13 @@
     border: 1px solid red; 
     border-right: 20px solid cornflowerblue; 
    } 
+   .ezMessages{ 
+    float: left; 
+    width: 5%; 
+    height: 20px; 
+    color: red; 
+    border: 1px solid red; 
+    border-right: 20px solid cornflowerblue; 
+   } 
+   
    

@@ -13,13 +13,14 @@ var body = '<html>'+
     '</head>'+
     '<body onload="ezzc()">'+
     '<div class="ezTime" id="ezTime"></div>'+
+    '<div class="ezMessages" id="ezMessages"></div>'+
     '<center>'+
     '<h6>Callback Function:::'+version+'</h6>'+
 //    '<textarea id="msg" name="msg" rows="1" cols="80"></textarea>'+
-    '<form action="/" method="post">'+
-    '<textarea name="text" rows="8" cols="80"></textarea>'+
+    '<form id="ezForm" name="ezForm" method="post">'+
+    '<textarea id="ezTexts" name="text" rows="8" cols="80"></textarea>'+
     '<input type="hidden" name="project" value="asa"/><br>'+
-    '<input type="submit" value="OK" style="font-size:20px"/>'+
+    '<input type="button" value="OK" style="font-size:20px" onclick="showMsg()" />'+
     '</form></center>'+
     '<form action="http://39.107.238.138:8886/file" enctype="multipart/form-data" method="post">'+
     '<input type="file" name="file"/><br/>'+
