@@ -1,5 +1,5 @@
 //EZZC.js  Since 2020.08.17 12:59
-var version = '1.2';
+var version = '7.2';
 var port = 8884;
 
 var body = '<html>'+
