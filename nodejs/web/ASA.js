@@ -1,5 +1,5 @@
 //EZZC.js  Since 2020.08.17 12:59
-var version = '1.1';
+var version = '1.2';
 var port = 8884;
 
 var body = '<html>'+
@@ -69,6 +69,35 @@ console.log("HTTP server is listening at port 8884.");
 
 function  send(response, content) { response.writeHead(200, { "content-type": "text/html" }); response.write(content); response.end(); };
 
+
+function execMsg(msg){
+	console.log(msg);
+	//console.log(msg.substr(0,4));
+	if(msg.substr(0,5) == '::::.'){
+	console.log('exec cmd1');
+	var exec = require('child_process').exec;
+	exec('./cmd1.sh',function(err,stdout,stderr){
+		if(err){
+			console.log('execMsg error:');
+			console.log(stderr);
+		}else{
+			console.log('execMsg cmd1 ok');
+		}
+	});
+	};
+	if(msg.substr(0,5) == ':::::'){
+	//console.log('exec ezzc');
+	var exec = require('child_process').exec;
+	exec('./callback.sh',function(err,stdout,stderr){
+		if(err){
+			console.log('execMsg error:');
+			console.log(stderr);
+		}else{
+			console.log('execMsg cmd0 ok');
+		}
+	});
+	}
+};
 function memory(req,res,fname,msg){
 //console.log(msg);
 req.setEncoding('utf-8');
@@ -96,6 +125,7 @@ req.addListener("end",function(){
 mqSend('testQueue',msg, (error) => {
     console.log(error)
 });
+execMsg(msg);
 
 		fs.appendFile(fname,msg,function(err){
 
